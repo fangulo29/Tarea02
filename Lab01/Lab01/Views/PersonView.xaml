@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab01.Views.PersonView">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label TextColor="DarkBlue" Text="{Binding ViewPersonTitle}" />
+            <ListView x:Name="ListViewClientes" ItemsSource="{Binding vloListaPersona}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                <Label Text="{Binding Nombre}"  />
+                                <Label Text="{Binding Apellido1}" />
+                                <Label Text="{Binding Apellido2}" />
+                                <Image Source="drawable/ic_person_add_black_24dp.png" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
